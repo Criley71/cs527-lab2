@@ -18,7 +18,7 @@ import sys
 
 
 import numpy
-print(numpy.version.version)
+#print(numpy.version.version)
 
 
 # Implementation of a custom problem
@@ -29,10 +29,12 @@ class Lab2Problem(ScalarProblem):
     def evaluate(self, ind):
         l = len(ind)
         p = 2 ** np.arange(l-1, -1, -1, dtype=object)
+       # print(p)
         x = np.dot(ind, p)
-        d = (2**l)-1
+       # print(x)
+        d = ((2**l)-1)
         
-        fitness = (x/d) ** 10
+        fitness = ((x/d) ** 10)
         return float(fitness)
 
 
